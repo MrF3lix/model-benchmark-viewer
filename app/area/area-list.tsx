@@ -1,5 +1,6 @@
 'use client'
 
+import { Badge, BadgeType } from '@/components/badge'
 import { List } from '@/components/list/list'
 import { ListItem } from '@/components/list/list-item'
 import { getAreas } from '@/queries/areas'
@@ -13,10 +14,12 @@ import Link from 'next/link'
 const AreaListItem = ({ area }: any) => {
     return (
         <ListItem className="p-0">
-            <Link className="w-full p-6 flex justify-between items-center" href={`/area/${area.id}`}>
-                <div className="flex flex-col">
+            <Link className="w-full p-4 flex justify-between items-center" href={`/area/${area.id}`}>
+                <div className="flex flex-col min-w-96">
                     <div className="font-semibold">{area.name}</div>
-                    <div className="text-sm text-gray-700">{area.task[0].count} Tasks</div>
+                </div>
+                <div className="flex-1">
+                    <Badge type={BadgeType.DEFAULT}>{area.task[0].count} Tasks</Badge>
                 </div>
                 <div className="w-10 p-1 rounded-full text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                     <ArrowRightIcon className="block h-5 w-5" />

@@ -26,7 +26,7 @@ interface EvaluationParams {
 const EvaluationListItem = ({ evaluation }: any) => {
     return (
         <ListItem className="p-0">
-            <Link className="w-full p-6 flex justify-between items-center" href={`/evaluation/${evaluation.id}`}>
+            <Link className="w-full p-4 flex justify-between items-center" href={`/evaluation/${evaluation.id}`}>
                 <div className="flex flex-col gap-2 min-w-96">
                     <div className="font-semibold truncate">{evaluation.id}</div>
                     {evaluation.description &&

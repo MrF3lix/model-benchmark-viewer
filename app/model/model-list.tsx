@@ -4,7 +4,7 @@ import { Badge, BadgeType } from '@/components/badge'
 import { Input } from '@/components/form/input'
 import { Select } from '@/components/form/select'
 import { List } from '@/components/list/list'
-import { ListItem } from '@/components/list/list-item'
+import { ListItem } from '@/components/list/list-item' 
 import { getAreas } from '@/queries/areas'
 import { getMethodologies, getMethodologiesCount } from '@/queries/results'
 import useSupabaseBrowser from '@/utils/supabase/browser'
@@ -17,7 +17,7 @@ import { useMemo, useState } from 'react'
 const ModelListItem = ({ model }: any) => {
     return (
         <ListItem className="p-0">
-            <Link className="w-full p-6 flex justify-between items-center gap-2" href={`/model/${model.id}`}>
+            <Link className="w-full p-4 flex justify-between items-center gap-2" href={`/model/${model.id}`}>
                 <div className="flex flex-col min-w-96 max-w-96">
                     <div className="font-semibold text-wrap">{model.methodology}</div>
                     <div className="text-xs text-gray-500">{model.paper}</div>

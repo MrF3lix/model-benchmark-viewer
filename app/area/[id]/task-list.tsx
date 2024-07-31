@@ -25,7 +25,7 @@ interface TaskParams {
 const TaskListItem = ({ task }: any) => {
     return (
         <ListItem className="p-0">
-            <Link className="w-full p-6 flex justify-between items-center" href={`/task/${task.id}`}>
+            <Link className="w-full p-4 flex justify-between items-center" href={`/task/${task.id}`}>
                 <div className="flex flex-col gap-2 min-w-96">
                     <div className="font-semibold truncate">{task.name}</div>
                     <div className="truncate text-gray-500 text-xs text-wrap">
