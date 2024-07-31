@@ -189,7 +189,7 @@ export default function EvaluationList({ id }: EvaluationParams) {
                     <div className="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                         <dt className="text-sm font-medium text-gray-500">Areas</dt>
                         <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 flex gap-2">
-                            {task?.areas.map((area: string) => (<Badge type={BadgeType.NEUTRAL}>{area}</Badge>))}
+                            {task?.areas.map((area: string) => (<Badge key={area} type={BadgeType.NEUTRAL}>{area}</Badge>))}
                         </dd>
                     </div>
                     <div className="p-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">

@@ -24,13 +24,13 @@ const ModelListItem = ({ model }: any) => {
                 </div>
                 <div className="flex-1 flex flex-wrap gap-2 justify-start items-start">
                     {model.area.map((area: string) => (
-                        <Badge type={BadgeType.NEUTRAL}>{area}</Badge>
+                        <Badge key={area} type={BadgeType.NEUTRAL}>{area}</Badge>
                     ))}
                 </div>
                 {model.evaluation_dates && model.evaluation_dates.length > 0 &&
                     <div className="flex-1 flex flex-wrap gap-2 justify-start items-start">
                         {model.evaluation_dates.filter((date: string) => date != null).map((date: string) => (
-                            <Badge type={BadgeType.DEFAULT}>{date}</Badge>
+                            <Badge key={date} type={BadgeType.DEFAULT}>{date}</Badge>
                         ))}
                     </div>
                 }
